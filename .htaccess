@@ -1,0 +1,71 @@
+# ============================================================
+# Cognitex GmbH – Apache Security & Performance Config
+# ============================================================
+
+# --- Verzeichnis-Listings deaktivieren ---
+Options -Indexes
+
+# --- Security Headers ---
+<IfModule mod_headers.c>
+    # Clickjacking-Schutz
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # MIME-Sniffing verhindern
+    Header always set X-Content-Type-Options "nosniff"
+
+    # XSS-Filter (ältere Browser)
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer nur bei gleichem Ursprung
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Browser-Features einschränken
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # HSTS – HTTPS für 1 Jahr erzwingen (erst aktivieren, wenn HTTPS stabil läuft)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy
+    # Erlaubt: eigene Ressourcen + Google Fonts + Unsplash-Bilder + Inline-Scripts/Styles (nötig für Canvas-Animation)
+    Header always set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data: blob:; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; form-action 'self' mailto:;"
+
+    # Server-Info ausblenden
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+# --- HTTPS-Weiterleitung (IONOS macht das meist automatisch, als Fallback) ---
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Sensible Dateien sperren ---
+<FilesMatch "(^\.htaccess|^\.git|\.env|\.log)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# --- Caching für statische Assets ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png             "access plus 1 year"
+    ExpiresByType image/jpeg            "access plus 1 year"
+    ExpiresByType image/jpg             "access plus 1 year"
+    ExpiresByType image/webp            "access plus 1 year"
+    ExpiresByType image/svg+xml         "access plus 1 year"
+    ExpiresByType text/css              "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/pdf       "access plus 1 month"
+    ExpiresByType text/html             "access plus 1 hour"
+    ExpiresByType application/json      "access plus 0 seconds"
+</IfModule>
+
+# --- Komprimierung ---
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript text/plain application/json
+</IfModule>
+
+# --- Fehlerseiten (optional anpassen) ---
+# ErrorDocument 404 /404.html

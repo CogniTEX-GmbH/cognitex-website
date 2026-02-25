@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>try{var t=localStorage.getItem('cgx-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns – Cognitex</title>
+  <meta name="description" content="Vision, Mission und Werte von Cognitex. Wir machen den Mittelstand KI-fähig – nicht abhängig.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="CogniTEX GmbH - Logo_20251226.png" alt="Cognitex GmbH" height="40"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menü">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="methodik.html">Methodik</a></li>
+        <li><a href="ueber-uns.html" class="active">Über uns</a></li>
+        <li style="display:flex;align-items:center;">
+          <button id="themeToggle" class="theme-toggle" aria-label="Light Mode aktivieren" title="Light Mode"><span class="ti"></span></button>
+        </li>
+        <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="section-label">Über Cognitex</p>
+      <h1>Befähigung statt <span class="gradient-text">Abhängigkeit</span></h1>
+      <p>Wir glauben daran, dass jedes mittelständische Unternehmen KI verstehen, führen und eigenständig betreiben können sollte.</p>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="section">
+    <div class="container">
+      <div class="dual-hub">
+        <div class="hub-card" style="border-left: 3px solid var(--accent);">
+          <p class="section-label">Vision</p>
+          <h3>Wir machen den Mittelstand KI-fähig – nicht abhängig.</h3>
+          <p>Cognitex befähigt KMUs im DACH-Raum, KI, Automatisierung und Agentenlösungen so zu verstehen, zu führen und zu betreiben, dass messbare Wirkung entsteht – mit einem einzigartigen Ansatz aus kundenspezifischem Enablement, Change-Kompetenz und umsetzungsstarkem Dual-Hub-Modell (Europa + Paraguay).</p>
+        </div>
+        <div class="hub-card" style="border-left: 3px solid var(--accent2);">
+          <p class="section-label">Mission</p>
+          <h3>Vom echten Bedarf bis zur sauberen Umsetzung.</h3>
+          <p>Wir begleiten KMUs vom echten Bedarf bis zur sauberen Umsetzung: Wir analysieren Prozesse im Job-Shadowing, übersetzen sie in umsetzbare Requirements, trainieren kundenspezifisch (Hilfe zur Selbsthilfe) und setzen Lösungen pragmatisch um – auf Basis bewährter Tools, mit klarer Governance, Dokumentation und Human-in-the-Loop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werte -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Unsere Werte</p>
+        <h2>Woran wir <span class="gradient-text">glauben</span></h2>
+        <p>Diese Grundsätze leiten alles, was wir tun – von der Beratung bis zur Implementierung.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">&#127919;</div>
+          <h4>Kundenzentriert</h4>
+          <p>Der Kunde steht im Zentrum – wir starten beim echten Bedarf, nicht bei der Technologie.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128170;</div>
+          <h4>Befähigend</h4>
+          <p>Hilfe zur Selbsthilfe. Unser Erfolg misst sich daran, wie eigenständig unsere Kunden werden.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#9989;</div>
+          <h4>Pragmatisch</h4>
+          <p>Wir liefern Ergebnisse, keine PowerPoint-Schlachten. Bewährte Tools statt Overengineering.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128275;</div>
+          <h4>Transparent</h4>
+          <p>Offene Kommunikation, nachvollziehbare Dokumentation und ehrliche Einschätzungen.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128737;</div>
+          <h4>Verantwortungsvoll</h4>
+          <p>Human-in-the-Loop, AI-Disclaimer und klare Governance sind fester Bestandteil jeder Lösung.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127758;</div>
+          <h4>Global denken, lokal handeln</h4>
+          <p>Unser Dual-Hub-Modell verbindet Kundennähe in Europa mit globaler Umsetzungsstärke.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP: Was uns unterscheidet -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Warum Cognitex</p>
+        <h2>Was uns <span class="gradient-text">besonders macht</span></h2>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-icon">&#128161;</div>
+          <h3>Kein eigenes Hosting</h3>
+          <p>Cognitex entwickelt kein eigenes „gehostetes Produkt". Wir integrieren, konfigurieren und betreiben gemeinsam mit dem Kunden bewährte Open-Source- und Fremd-Komponenten – kundenseitig, lokal, in deren Umgebung.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#127758;</div>
+          <h3>Dual-Hub Delivery</h3>
+          <p>Europa-Frontend für Kundennähe und strategische Steuerung. Paraguay-Backoffice für skalierbare Umsetzung. Ziel: 60–70% Umsetzungsanteil über das Backoffice – mit klaren Qualitätsstandards.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128218;</div>
+          <h3>Enablement-Standardpaket</h3>
+          <p>Jeder Kunde erhält ein Enablement-Paket: Training, Betriebsleitfaden und Admin-Runbook – damit Kundenselbstständigkeit kein leeres Versprechen bleibt.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128200;</div>
+          <h3>Qualitätsmanagement</h3>
+          <p>QMS-Grundgerüst mit Doku-Pflichten, AI-Disclaimern, Security/Compliance-Checklisten und Übergabelogs – professionell und nachvollziehbar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ziele 2026 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Roadmap</p>
+        <h2>Unsere Ziele <span class="gradient-text">2026</span></h2>
+        <p>Ambitioniert, aber erreichbar. Diese Meilensteine treiben uns an.</p>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <h3>10+ Implementierungen</h3>
+          <p>Mindestens 10 kundenspezifische KI-/Automations-Implementierungen mit dokumentierter Abnahme bis Ende 2026.</p>
+        </div>
+        <div class="card">
+          <h3>Kundenfeedback-Loop</h3>
+          <p>Standardisierter Kundenzufriedenheits- und Feedback-Loop ab Q3/2026 – für kontinuierliche Verbesserung.</p>
+        </div>
+        <div class="card">
+          <h3>Paraguay lieferfähig</h3>
+          <p>Backoffice Paraguay voll operativ bis Q4/2026: definierte Rollen, Recruiting, Onboarding und Qualitätschecks.</p>
+        </div>
+        <div class="card">
+          <h3>Partner-Ökosystem</h3>
+          <p>Strategisches Partner- und Tool-Ökosystem bis Q3/2026 mit Governance und wiederholbaren Angebotsbausteinen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <p class="section-label">Teil der Reise werden</p>
+        <h2>Lass uns gemeinsam den Mittelstand KI-fähig machen.</h2>
+        <p>Ob als Kunde, Partner oder Investor – wir freuen uns auf den Austausch.</p>
+        <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><img src="CogniTEX GmbH - Logo_20251226.png" alt="Cognitex GmbH" height="40"></div>
+          <p>Wir machen den Mittelstand KI-fähig – nicht abhängig. Kundenzentriert, befähigend und umsetzungsstark.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Seiten</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="methodik.html">Methodik</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="leistungen.html">KI-Prozessanalyse</a></li>
+            <li><a href="leistungen.html">KI-Agenten</a></li>
+            <li><a href="leistungen.html">Enablement</a></li>
+            <li><a href="leistungen.html">Corporate Bundle</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="kontakt.html">Kontaktformular</a></li>
+            <li><a href="kontakt.html">Erstgespräch</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Cognitex GmbH. Alle Rechte vorbehalten.</span>
+        <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="CogniTEX GmbH - AGB_v2.pdf" target="_blank">AGB</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

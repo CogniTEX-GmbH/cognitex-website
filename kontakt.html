@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>try{var t=localStorage.getItem('cgx-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Cognitex</title>
+  <meta name="description" content="Kontaktieren Sie Cognitex für ein unverbindliches Erstgespräch. KI-Beratung und Implementierung für den Mittelstand.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="CogniTEX GmbH - Logo_20251226.png" alt="Cognitex GmbH" height="40"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menü">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="methodik.html">Methodik</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li style="display:flex;align-items:center;">
+          <button id="themeToggle" class="theme-toggle" aria-label="Light Mode aktivieren" title="Light Mode"><span class="ti"></span></button>
+        </li>
+        <li><a href="kontakt.html" class="nav-cta active">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="section-label">Kontakt</p>
+      <h1>Lass uns <span class="gradient-text">ins Gespräch kommen</span></h1>
+      <p>Unverbindliches Erstgespräch, Fragen zu unseren Leistungen oder Partnerschaftsanfragen – wir freuen uns auf eure Nachricht.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div>
+          <h3 style="margin-bottom:24px;">Nachricht senden</h3>
+          <!-- TODO: Replace YOUR_FORMSPREE_ID with your Formspree endpoint (register at https://formspree.io with office@cognitex.online) -->
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vorname">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" required placeholder="Max">
+              </div>
+              <div class="form-group">
+                <label for="nachname">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" required placeholder="Mustermann">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" required placeholder="max@firma.de">
+              </div>
+              <div class="form-group">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="+49 123 456789">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="unternehmen">Unternehmen</label>
+              <input type="text" id="unternehmen" name="unternehmen" placeholder="Firma GmbH">
+            </div>
+            <div class="form-group">
+              <label for="interesse">Wofür interessieren Sie sich?</label>
+              <select id="interesse" name="interesse">
+                <option value="">Bitte wählen...</option>
+                <option value="erstgespraech">Unverbindliches Erstgespräch</option>
+                <option value="prozessanalyse">KI-Prozessanalyse</option>
+                <option value="agenten">KI-Agenten & Automatisierung</option>
+                <option value="enablement">Enablement & Training</option>
+                <option value="bundle">Corporate KI-Bundle</option>
+                <option value="partnerschaft">Partnerschaft</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nachricht">Nachricht *</label>
+              <textarea id="nachricht" name="nachricht" required placeholder="Erzählen Sie uns von Ihrem Vorhaben..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Nachricht absenden</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 style="margin-bottom:24px;">Kontaktinformationen</h3>
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="info-card-icon">&#128172;</div>
+              <div>
+                <h4>Kontaktformular</h4>
+                <p>Nutzen Sie unser Kontaktformular – wir melden uns zeitnah bei Ihnen.</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">&#128205;</div>
+              <div>
+                <h4>Standort Europa</h4>
+                <p>DACH-Raum<br>Deutschland / Österreich / Schweiz</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">&#127758;</div>
+              <div>
+                <h4>Standort Paraguay</h4>
+                <p>Backoffice &amp; Umsetzungs-Hub<br>Asunci&oacute;n, Paraguay</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">&#128337;</div>
+              <div>
+                <h4>Reaktionszeit</h4>
+                <p>Wir melden uns in der Regel innerhalb von 24 Stunden bei Ihnen.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div style="margin-top:32px;">
+            <h3 style="margin-bottom:16px;">Häufige Fragen</h3>
+            <div class="card" style="margin-bottom:12px;">
+              <div style="padding:20px;">
+                <h4>Was kostet ein Erstgespräch?</h4>
+                <p style="color:var(--text-muted); margin-top:6px; font-size:0.9rem;">Das Erstgespräch ist unverbindlich und kostenlos. Wir klären gemeinsam, ob und wie wir euch helfen können.</p>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom:12px;">
+              <div style="padding:20px;">
+                <h4>Für welche Unternehmensgröße seid ihr geeignet?</h4>
+                <p style="color:var(--text-muted); margin-top:6px; font-size:0.9rem;">Wir fokussieren uns auf KMUs im DACH-Raum – vom kleinen Betrieb bis zum gehobenen Mittelstand.</p>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom:12px;">
+              <div style="padding:20px;">
+                <h4>Brauche ich technisches Vorwissen?</h4>
+                <p style="color:var(--text-muted); margin-top:6px; font-size:0.9rem;">Nein. Unser Ansatz ist „Hilfe zur Selbsthilfe" – wir holen euch dort ab, wo ihr steht, und bauen euer Wissen gezielt auf.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><img src="CogniTEX GmbH - Logo_20251226.png" alt="Cognitex GmbH" height="40"></div>
+          <p>Wir machen den Mittelstand KI-fähig – nicht abhängig. Kundenzentriert, befähigend und umsetzungsstark.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Seiten</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="methodik.html">Methodik</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="leistungen.html">KI-Prozessanalyse</a></li>
+            <li><a href="leistungen.html">KI-Agenten</a></li>
+            <li><a href="leistungen.html">Enablement</a></li>
+            <li><a href="leistungen.html">Corporate Bundle</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="kontakt.html">Kontaktformular</a></li>
+            <li><a href="kontakt.html">Erstgespräch</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Cognitex GmbH. Alle Rechte vorbehalten.</span>
+        <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="CogniTEX GmbH - AGB_v2.pdf" target="_blank">AGB</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
